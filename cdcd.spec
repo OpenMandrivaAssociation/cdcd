@@ -9,6 +9,7 @@ Release:	%{release}
 License:	GPL
 Group:		Sound
 Source0:	%{name}-%{version}.tar.bz2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Buildrequires:	libcdaudio-devel ncurses-devel readline-devel
 URL:		http://libcdaudio.sourceforge.net/
 
