@@ -27,15 +27,16 @@ open anyway.
 %setup  -q
 
 %build
+autoreconf -fi
 %configure
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %post 
 %_install_info %{name}.info
