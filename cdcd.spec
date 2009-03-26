@@ -1,6 +1,6 @@
 %define	name	cdcd
 %define	version	0.6.6
-%define	release	%mkrel 6
+%define	release	%mkrel 7
 
 Summary:	Command line based cd player with cddb support
 Name:		%{name}
