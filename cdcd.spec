@@ -1,6 +1,6 @@
 %define	name	cdcd
 %define	version	0.6.6
-%define	release	%mkrel 7
+%define	release	%mkrel 8
 
 Summary:	Command line based cd player with cddb support
 Name:		%{name}
@@ -9,8 +9,9 @@ Release:	%{release}
 License:	GPL
 Group:		Sound
 Source0:	%{name}-%{version}.tar.bz2
+Patch0:		cdcd-0.6.6-drop-glib1.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Buildrequires:	libcdaudio-devel ncurses-devel readline-devel
+Buildrequires:	libcdaudio-devel readline-devel
 URL:		http://libcdaudio.sourceforge.net/
 
 %description
@@ -24,16 +25,17 @@ of a console or an xterm to have a traditional CD player
 open anyway.
 
 %prep
-%setup  -q
+%setup -q
+%patch0 -p0
 
 %build
 autoreconf -fi
-%configure
+%configure2_5x
 %make
 
 %install
 rm -rf %{buildroot}
-%makeinstall
+%makeinstall_std
 
 %clean
 rm -rf %{buildroot}
