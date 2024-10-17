@@ -12,7 +12,7 @@ Source0:	%{name}-%{version}.tar.bz2
 Patch0:		cdcd-0.6.6-drop-glib1.patch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Buildrequires:	libcdaudio-devel readline-devel
-URL:		http://libcdaudio.sourceforge.net/
+URL:		https://libcdaudio.sourceforge.net/
 
 %description
 cdcd takes a different approach from conventional console
